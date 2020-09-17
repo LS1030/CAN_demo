@@ -4,3 +4,4 @@ Debug/*
 !Debug/*.elf
 !Debug/*.list
 !Debug/*.map
+Debug/objects.list
