@@ -188,15 +188,15 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *CanHandle)
   }
 
   /* Display LEDx */
-  CAN_RxMessage_time = HAL_GetTick();
-  LED0_OFF;
+  // CAN_RxMessage_time = HAL_GetTick();
+  // LED0_OFF;
 
-  if ((CAN_RxHeader.StdId == 0x320) && (CAN_RxHeader.IDE == CAN_ID_STD) && (CAN_RxHeader.DLC == 3))
-  {
-      led_time = HAL_GetTick();
-      LED1_ON;
-      Uart_printf(&huart1, "\r\n%s\r\n", CAN_RxData);
-  }
+  // if ((CAN_RxHeader.StdId == 0x320) && (CAN_RxHeader.IDE == CAN_ID_STD) && (CAN_RxHeader.DLC == 3))
+  // {
+  //     led_time = HAL_GetTick();
+  //     LED1_ON;
+  //     Uart_printf(&huart1, "\r\n%s\r\n", CAN_RxData);
+  // }
 }
 
 /**

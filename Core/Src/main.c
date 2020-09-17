@@ -107,39 +107,39 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
      /*CAN Rx Message interval time should less than 1s*/
-	 CAN_time_temp = CAN_RxMessage_time;
-	 led_time_temp = led_time;
-	 systick_temp = HAL_GetTick();
-	 if(systick_temp > CAN_time_temp)
-	 {
-		 if ((systick_temp - CAN_time_temp) > CAN_RxMessage_time_interval_Max)
-		      {
-		        LED0_ON;
-		      }
-	 }
+	//  CAN_time_temp = CAN_RxMessage_time;
+	//  led_time_temp = led_time;
+	//  systick_temp = HAL_GetTick();
+	//  if(systick_temp > CAN_time_temp)
+	//  {
+	// 	 if ((systick_temp - CAN_time_temp) > CAN_RxMessage_time_interval_Max)
+	// 	      {
+	// 	        LED0_ON;
+	// 	      }
+	//  }
 
-	 if(systick_temp > led_time_temp)
-	 {
-		 if ((systick_temp-led_time_temp) > led_delay_time)
-	     {
-			 LED1_OFF;
-	      }
-	 }
+	//  if(systick_temp > led_time_temp)
+	//  {
+	// 	 if ((systick_temp-led_time_temp) > led_delay_time)
+	//      {
+	// 		 LED1_OFF;
+	//       }
+	//  }
 
-//    /* Set the data to be transmitted */
-//    CAN_TxData[0] = 3;
-//    CAN_TxData[1] = 2;
-//    CAN_TxData[2] = 0;
-//    CAN_TxHeader.StdId = 0x320;
-//    CAN_TxHeader.DLC = 3;
-//
-//    /* Start the Transmission process */
-//    if (HAL_CAN_AddTxMessage(&hcan, &CAN_TxHeader, CAN_TxData, &CAN_TxMailbox) != HAL_OK)
-//    {
-//      /* Transmission request Error */
-//      Error_Handler();
-//    }
-//    HAL_Delay(5);
+   /* Set the data to be transmitted */
+   CAN_TxData[0] = 3;
+   CAN_TxData[1] = 2;
+   CAN_TxData[2] = 0;
+   CAN_TxHeader.StdId = 0x320;
+   CAN_TxHeader.DLC = 3;
+
+   /* Start the Transmission process */
+   if (HAL_CAN_AddTxMessage(&hcan, &CAN_TxHeader, CAN_TxData, &CAN_TxMailbox) != HAL_OK)
+   {
+     /* Transmission request Error */
+     Error_Handler();
+   }
+   HAL_Delay(5);
   }
   /* USER CODE END 3 */
 }
