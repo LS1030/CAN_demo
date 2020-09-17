@@ -36,7 +36,7 @@ extern CAN_HandleTypeDef hcan;
 /* USER CODE BEGIN Private defines */
 #define CAN_RxMessage_time_interval_Max 1000
 
-extern uint32_t CAN_RxMessage_time;
+extern uint32_t              CAN_RxMessage_time;
 extern CAN_TxHeaderTypeDef   CAN_TxHeader;
 extern CAN_RxHeaderTypeDef   CAN_RxHeader;
 extern uint8_t               CAN_TxData[8];

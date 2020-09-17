@@ -112,7 +112,7 @@ int main(void)
 	 systick_temp = HAL_GetTick();
 	 if(systick_temp > CAN_time_temp)
 	 {
-		 if ((systick_temp-CAN_time_temp) > CAN_RxMessage_time_interval_Max)
+		 if ((systick_temp - CAN_time_temp) > CAN_RxMessage_time_interval_Max)
 		      {
 		        LED0_ON;
 		      }
